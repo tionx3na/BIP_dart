@@ -158,6 +158,11 @@ Uint8List mnemonicToSeed(String mnemonic, {String passphrase = ""}) {
   return pbkdf2.process(mnemonic, passPhrase: passphrase);
 }
 
+// String mnemonicToSeedHex(String mnemonic, {String passphrase = ""}) {
+//   final seed = mnemonicToSeed(mnemonic);
+//   return HEX.encode(seed);
+//   }
+
 String mnemonicToSeedHex(String mnemonic, {String passphrase = ""}) {
   return mnemonicToSeed(mnemonic, passphrase: passphrase).map((byte) {
     return byte.toRadixString(16).padLeft(2, '0');

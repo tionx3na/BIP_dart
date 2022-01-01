@@ -13,6 +13,8 @@ class MnemonicGenerator extends StatefulWidget{
 class _MnemonicGeneratorState extends State<MnemonicGenerator> {
 
   late String mnemonic;
+  late dynamic seed;
+  late dynamic entropy;
 
   @override 
 
@@ -33,6 +35,10 @@ class _MnemonicGeneratorState extends State<MnemonicGenerator> {
               onPressed: () {
                 mnemonic = bip39.generateMnemonic();
                 print(mnemonic);
+                seed = bip39.mnemonicToSeedHex(mnemonic);
+                print(seed);
+                entropy = bip39.mnemonicToEntropy(mnemonic);
+                print(entropy);
               }, 
               icon: const Icon(Icons.add),
               )

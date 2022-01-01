@@ -66,7 +66,7 @@ class PBKDF2 {
 
    /* 
   ------------------------------------------------
-  Salt Prefix adds an extra layer of security
+  Salt Prefix should be "mnemonic" as per BIP-39
   ------------------------------------------------
    */
 
@@ -85,7 +85,7 @@ class PBKDF2 {
     this.blockLength = 128,
     this.iterationCount = 2048,
     this.keyLength = 64,
-    this.saltPrefix = "arunxena"
+    this.saltPrefix = "mnemonic"
   }) :_derivator = PBKDF2KeyDerivator(HMac(SHA512Digest(), blockLength));
 
   /* The passphrase is an empty string "", if not supplied by the user */
