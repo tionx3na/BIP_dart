@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bip/pages/mnemonic.dart';
+import 'package:bip/pages/generate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MnemonicGenerator(),
+      home: const GenerateMnemonic(),
     );
   }
 }

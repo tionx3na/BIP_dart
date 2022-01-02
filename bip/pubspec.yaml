@@ -23,6 +23,10 @@ dependencies:
   crypto: ^3.0.1
   # Easy hexadecimal covertion using dart:convert API
   hex: ^0.2.0
+  # BIP-32 dart library
+  bip32: ^2.0.0
+  # Bae58Check encoding library
+  base58check: ^2.0.0
 
 dev_dependencies:
   flutter_test:
